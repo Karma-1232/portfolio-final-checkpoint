@@ -1,0 +1,285 @@
+@-ms-viewport{ width: device-width; }
+
+body{
+  font-family: 'Ubuntu', sans-serif;;
+  margin: 10px;
+  padding: 10px;
+  background-image: url('../images/background_img.png');
+  background-size: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.skip a{
+  background: white;
+  padding: 10px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: relative;
+  top: -40px;
+}
+
+.skip a:focus{
+  top: 0px;
+}
+
+nav a{
+  font-size: 30px;
+  line-height: 2;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 500px;
+}
+
+nav a:hover{
+  background-color: yellow;
+  color: blue;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+.current{
+  text-decoration: underline;
+  background-color: rgb(224, 224, 224);
+}
+
+h1{
+  font-size: 56px;
+  color: #128ded;
+  font-weight: bold;
+  text-align: center;
+  min-height: 75px;
+}
+
+h2{
+  font-size: 48px;
+  color: #128ded;
+  font-weight: bold;
+  text-align: center;
+  min-height: 60px;
+}
+
+h3{
+  font-size: 36px;
+  color: #128ded;
+  font-weight: bold;
+  text-align: center;
+  min-height: 48px;
+}
+
+form {
+  background:#ffffff;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  min-width: 300px;
+}
+
+p{
+  font-size: 14pt;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+a{
+  color: #D10000;
+  font-style: italics;
+  text-decoration: underline;
+}
+
+a:hover{
+  color: white;
+  background-color: black;
+}
+
+img{
+  width: 90%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 5px;
+  border: 5px solid rgb(184, 184, 184);
+}
+
+main > image{
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+img:hover{
+  animation: zoom-in-zoom-out 0.5s 1 alternate forwards;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    border: 5px solid rgb(184, 184, 184);
+    padding: 10px;
+    transform: scale(1, 1);
+  }
+  100% {
+    border: 10px solid #128ded;
+    padding: 5px;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+ul{
+  background-color: white;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li{
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+footer{
+  color: grey;
+  background-color: white;
+  opacity: 50%;
+  padding: 10px;
+}
+
+footer > p{
+  font-size: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.container > img{
+  width: 80%;
+}
+
+.lifegrid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.lifegrid > div{
+  padding-top: 20px;
+}
+
+
+.divImg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside {
+  padding-top: 10px;
+  margin-left: .5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside > p{
+  font-size: 14pt;
+}
+
+
+
+@media (prefers-reduced-motion) {
+  img:hover{
+    border: 5px solid #128ded;
+    animation: none;
+  }
+}
+
+@media all and (min-width: 480px){
+  li{
+      max-width: 200px;
+      width: 40%;
+  }
+
+  li > a{
+    font-size: 20px;
+  }
+
+  ul{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .divImg > img{
+    min-width: 250px;
+  }
+
+  .container > img{
+    width: 175px;
+  }
+
+  p{
+    font-size: 16pt;
+  }
+
+  .divImg{
+    display: inline;
+    float:left;
+  }
+
+  form {
+    width: 450px;
+  }
+
+  
+  #specialImg > img{
+    display:none;
+  }
+  
+  .lifegrid{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .lifegrid > div > h2{
+    font-size: 36px;
+  }
+
+}
+
+@media all and (min-width: 1024px){
+  li{
+    min-width: 200px;
+    width: 20%;
+  }
+
+  .container > img{
+    width: 300px;
+  }
+
+  p{
+    font-size: 18pt;
+  }
+
+}
